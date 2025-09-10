@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio | Sw4nhilde</title>
   <style>
-    :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --accent:#0b74f0;
-      --text:#20232a;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg, var(--bg), #ffffff);
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:2rem;
+    header {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    .card{
-      width:100%;
-      max-width:720px;
-      background:var(--card);
-      border-radius:14px;
-      box-shadow:0 10px 30px rgba(15,23,42,0.08);
-      padding:2.25rem;
-      text-align:center;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    .avatar{
-      width:96px;
-      height:96px;
-      border-radius:50%;
-      margin:0 auto 1rem;
-      background:linear-gradient(135deg,var(--accent),#6fb3ff);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:700;
-      font-size:28px;
-      letter-spacing:0.6px;
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
-    h1{
-      margin:0;
-      font-size:1.8rem;
-      letter-spacing:0.2px;
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-    p.nim{
-      margin:0.5rem 0 0;
-      font-size:1.05rem;
-      color: #44515a;
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
     }
-    footer{
-      margin-top:1.5rem;
-      font-size:0.85rem;
-      color:#7a8791;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
-
-    /* responsive tweaks */
-    @media (max-width:420px){
-      .card{padding:1.25rem}
-      h1{font-size:1.4rem}
-      .avatar{width:72px;height:72px;font-size:22px}
+    .project {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+    .project h3 {
+      margin-top: 0;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #222;
+      color: #fff;
     }
   </style>
 </head>
 <body>
-  <main class="card" role="main" aria-labelledby="nama">
-    <div class="avatar" aria-hidden="true">SW</div>
+  <header>
+    <h1>Sw4nhilde</h1>
+    <p>Portofolio Website</p>
+  </header>
 
-    <!-- Ganti NAMA_LENGKAP dan NIM_ANDA -->
-    <h1 id="nama">MUHAMMAD EKA MANDIRI SUJANTO</h1>
-    <p class="nim">NIM: 1237050079</p>
+  <main>
+    <section>
+      <h2>Identitas</h2>
+      <p><strong>Nama:</strong> Muhammad Eka Mandiri Sujanto</p>
+      <p><strong>NIM:</strong> 1237050079</p>
+    </section>
 
-    <footer>
-      <div>GitHub: <a href="https://github.com/Sw4nhilde" target="_blank" rel="noopener">Sw4nhilde</a></div>
-      <div>© 2025</div>
-    </footer>
+    <section>
+      <h2>Proyek</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Banking App</h3>
+          <p>Aplikasi sederhana untuk simulasi perbankan dengan fitur CRUD.</p>
+          <a href="https://github.com/Sw4nhilde/banking-app" target="_blank">Lihat di GitHub →</a>
+        </div>
+        <div class="project">
+          <h3>Hitung Pajak</h3>
+          <p>Program untuk menghitung pajak berdasarkan aturan tertentu.</p>
+          <a href="https://github.com/Sw4nhilde/Hitung-Pajak" target="_blank">Lihat di GitHub →</a>
+        </div>
+        <div class="project">
+          <h3>Tugas Besar ALSTRUKDATA</h3>
+          <p>Proyek besar mata kuliah Algoritma dan Struktur Data.</p>
+          <a href="https://github.com/Sw4nhilde/Tugas-Besar-ALSTRUKDATA" target="_blank">Lihat di GitHub →</a>
+        </div>
+        <div class="project">
+          <h3>Program Meminjam Buku Perpustakaan</h3>
+          <p>Aplikasi untuk simulasi sistem peminjaman buku perpustakaan.</p>
+          <a href="https://github.com/Sw4nhilde/ProgramMeminjamBukuPerpustakaan" target="_blank">Lihat di GitHub →</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <p>© 2025 Sw4nhilde | Dibuat dengan ❤ menggunakan GitHub Pages</p>
+  </footer>
 </body>
 </html>
